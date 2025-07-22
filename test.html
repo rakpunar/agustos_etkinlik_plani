@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Etkinlik Takvimi - Ağustos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: #f7faff;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 1rem 0.5rem 0.2rem;
+    }
+
+    .takvim-logo {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      mix-blend-mode: multiply;
+      display: block;
+      margin: 1rem auto 0.3rem auto;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      color: #E4006F;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+
+    main {
+      padding: 1rem;
+      margin: 0 auto;
+    }
+
+    .takvim-modern {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      overflow: hidden;
+      border: 2px solid #E4006F;
+    }
+
+    .takvim-header-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      background: #e9ecef;
+      color: #E4006F;
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+      border-radius: 1rem 1rem 0 0;
+      overflow: hidden;
+      border-bottom: 1px solid #E4006F;
+    }
+
+    .takvim-header-row > div {
+      padding: 0.6rem;
+      border-right: 1px solid #E4006F;
+    }
+
+    .takvim-header-row > div:last-child {
+      border-right: none;
+    }
+
+    .takvim-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.2rem;
+      background: #f6f7f9;
+      padding: 1rem;
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    .takvim-gun {
+      background: #fff;
+      border: 2px solid #E4006F;
+      border-radius: 1rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      min-height: 220px;
+      transition: 0.3s ease all;
+    }
+
+    .gun-tarih {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #E4006F;
+      margin-bottom: 0.6rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .gun-etkinlikler {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      width: 100%;
+    }
+
+    .gun-etkinlik {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: #fff0f6;
+      border-radius: 0.8rem;
+      border: 1px solid #E4006F;
+      font-size: 1rem;
+      transition: 0.2s ease;
+    }
+
+    .gun-etkinlik img {
+      width: 75px;
+      height: 75px;
+      border-radius: 0.6rem;
+      object-fit: cover;
+    }
+
+    .gun-etkinlik span {
+      flex: 1;
+      font-weight: 500;
+      color: #E4006F;
+    }
+
+    .takvim-bos {
+  background: #f6f7f9;
+  opacity: 0.3;
+  pointer-events: none;
+  border-style: dashed;
+  box-shadow: none;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/header.jpg" alt="Anaokulu Logosu" class="takvim-logo" />
+    <h1>Ağustos 2025 Etkinlik Takvimi</h1>
+  </header>
+  <main>
+    <section class="takvim-modern">
+      <div class="takvim-header-row">
+        <div>Pazartesi</div>
+        <div>Salı</div>
+        <div>Çarşamba</div>
+        <div>Perşembe</div>
+        <div>Cuma</div>
+      </div>
+      <div class="takvim-grid">
+        <!-- 1. Hafta: 1 Ağustos Cuma'dan başlıyor -->
+        <div class="takvim-gun takvim-bos"></div>
+        <div class="takvim-gun takvim-bos"></div>
+        <div class="takvim-gun takvim-bos"></div>
+        <div class="takvim-gun takvim-bos"></div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">1 Ağustos Cuma</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/buz_boyama.png" alt="Buz Boyama"><span>🧊🎨 Buz Boyama</span></div>
+            <div class="gun-etkinlik"><img src="img/koordinasyon_oyunu.png" alt="Koordinasyon Oyunu"><span>🤹‍♂️ Koordinasyon Oyunu</span></div>
+          </div>
+        </div>
+        <!-- 2. Hafta: 4-8 Ağustos -->
+        <div class="takvim-gun">
+          <div class="gun-tarih">4 Ağustos Pazartesi</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/yapay_havuz_parkuru.png" alt="Yapay Havuz Parkuru"><span>🏊‍♂️ Yapay Havuz Parkuru</span></div>
+            <div class="gun-etkinlik"><img src="img/denge_oyunu.png" alt="Denge Oyunu"><span>⚖️ Denge Oyunu (Top Taşıma)</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">5 Ağustos Salı</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/kodlama_oyunu.png" alt="Kodlama Oyunu"><span>💻 Kodlama Oyunu</span></div>
+            <div class="gun-etkinlik"><img src="img/kopuk_partisi.png" alt="Köpük Partisi"><span>🫧 Köpük Partisi</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">6 Ağustos Çarşamba</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/ritim_oyunlari.png" alt="Ritim Oyunları"><span>🥁 Ritim Oyunları</span></div>
+            <div class="gun-etkinlik"><img src="img/bahce_oyunlari.png" alt="Bahçe Oyunları"><span>🌳 Bahçe Oyunları</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">7 Ağustos Perşembe</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/at_binme.png" alt="At Binme"><span>🐎 At Binme</span></div>
+            <div class="gun-etkinlik"><img src="img/okulda_piknik.png" alt="Okulda Piknik"><span>🍉 Okulda Piknik</span></div>
+            <div class="gun-etkinlik"><img src="img/balon_patlatma.png" alt="Balon Patlatma"><span>🎈 Zıplayarak Balon Patlatma</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">8 Ağustos Cuma</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/oyun_hamuru.png" alt="Oyun Hamuru"><span>🌈 Renkli Oyun Hamuru Yapımı</span></div>
+            <div class="gun-etkinlik"><img src="img/buz_kirma.png" alt="Buz Kırma"><span>🧊 Buz Kırma Oyunu</span></div>
+          </div>
+        </div>
+        <!-- 3. Hafta: 11-15 Ağustos -->
+        <div class="takvim-gun">
+          <div class="gun-tarih">11 Ağustos Pazartesi</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/kirilmayan_yumurta.png" alt="Kırılmayan Yumurtalar"><span>🥚 Kırılmayan Yumurtalar</span></div>
+            <div class="gun-etkinlik"><img src="img/mozaik_calismasi.png" alt="Mozaik Çalışması"><span>🖼️ Mozaik Çalışması</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">12 Ağustos Salı</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/kasiklardan_kukla_yapimi.png" alt="Kaşıklardan Kukla Yapımı"><span>🥄 Kaşıklardan Kukla Yapımı</span></div>
+            <div class="gun-etkinlik"><img src="img/geleneksel_oyunlar.png" alt="Geleneksel Oyunlar"><span>🧸 Geleneksel Oyunlar (Türkiye)</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">13 Ağustos Çarşamba</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/su_partisi.png" alt="Su Partisi"><span>💦 Su Partisi</span></div>
+            <div class="gun-etkinlik"><img src="img/su_alti_oyunu.png" alt="Su Altı Oyunu"><span>🐠 Su Altı Oyunu</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">14 Ağustos Perşembe</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/at_binme.png" alt="At Binme"><span>🐎 At Binme</span></div>
+            <div class="gun-etkinlik"><img src="img/dozer_oyunu.png" alt="Dozer Oyunu"><span>🚜 Dozer Oyunu</span></div>
+            <div class="gun-etkinlik"><img src="img/dolu_balon_tutma.png" alt="Dolu Balon Tutma"><span>🎈 Dolu Balon Tutma Oyunu</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">15 Ağustos Cuma</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/su_parkuru.png" alt="Su Parkuru"><span>💧 Su Parkuru</span></div>
+            <div class="gun-etkinlik"><img src="img/patlamayan_baloncuk_deneyi.png" alt="Patlamayan Baloncuk Deneyi"><span>🫧 Patlamayan Baloncuk Deneyi</span></div>
+          </div>
+        </div>
+        <!-- 4. Hafta: 18-22 Ağustos -->
+        <div class="takvim-gun">
+          <div class="gun-tarih">18 Ağustos Pazartesi</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/oyuncak_yikama.png" alt="Oyuncak Yıkama"><span>🧸 Bahçede Oyuncak Yıkama</span></div>
+            <div class="gun-etkinlik"><img src="img/renk_patlamasi.png" alt="Renk Patlaması"><span>🌈 Renk Patlaması</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">19 Ağustos Salı</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/ucurtma_gunu.png" alt="Uçurtma Günü"><span>🪁 Uçurtma Günü</span></div>
+            <div class="gun-etkinlik"><img src="img/dart_oyunu.png" alt="Dart Oyunu"><span>🎯 Dart Oyunu</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">20 Ağustos Çarşamba</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/evden_okula_alakasiz_esya_getirme.png" alt="Evden Okula Alakasız Eşya Getirme"><span>🎒 Evden Okula Alakasız Eşya Getirme</span></div>
+            <div class="gun-etkinlik"><img src="img/lego_baskisi.png" alt="Lego Baskısı"><span>🧱 Lego Baskısı</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">21 Ağustos Perşembe</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/at_binme.png" alt="At Binme"><span>🐎 At Binme</span></div>
+            <div class="gun-etkinlik"><img src="img/halat_denge_oyunu.png" alt="Denge Oyunu (Halat)"><span>🪢 Denge Oyunu (Halat)</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">22 Ağustos Cuma</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/pinokyo_boyama.png" alt="Pinokyo Boyaması"><span>🧑‍🎨 Pinokyo Boyaması</span></div>
+            <div class="gun-etkinlik"><img src="img/yumurta_tasima.png" alt="Yumurta Yarışı"><span>🥚 Yumurta Yarışı</span></div>
+          </div>
+        </div>
+        <!-- 5. Hafta: 25-29 Ağustos -->
+        <div class="takvim-gun">
+          <div class="gun-tarih">25 Ağustos Pazartesi</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/su_aktarma_oyunu.png" alt="Su Aktarma Oyunu"><span>💧 Su Aktarma Oyunu</span></div>
+            <div class="gun-etkinlik"><img src="img/panc_cailsmasi.png" alt="Panç Çalışması"><span>🥊 Panç Çalışması</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">26 Ağustos Salı</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/limonata_partisi.png" alt="Limonata Partisi"><span>🍋 Limonata Partisi</span></div>
+            <div class="gun-etkinlik"><img src="img/ritim_oyunlari.png" alt="Ritim Çalışması"><span>🥁 Ritim Çalışması</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">27 Ağustos Çarşamba</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/balon_patlatma.png" alt="Balon Patlatma"><span>🎈 Balon Patlatma</span></div>
+            <div class="gun-etkinlik"><img src="img/duyu_oyunlari.png" alt="Duyu Oyunları"><span>👃 Duyu Oyunları</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">28 Ağustos Perşembe</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/cali_bebek_atolyesi.png" alt="Çalı Bebek Atölyesi"><span>🧙‍♂️ Çalı Bebek Atölyesi</span></div>
+            <div class="gun-etkinlik"><img src="img/voleybol_oyunu.png" alt="Voleybol Oyunu"><span>🏐 Voleybol Oyunu</span></div>
+          </div>
+        </div>
+        <div class="takvim-gun">
+          <div class="gun-tarih">29 Ağustos Cuma</div>
+          <div class="gun-etkinlikler">
+            <div class="gun-etkinlik"><img src="img/tas_kagit_makas_parkur.png" alt="Taş Kağıt Makas Parkur"><span>🪨✂️ Taş Kağıt Makas Parkur</span></div>
+            <div class="gun-etkinlik"><img src="img/yelpaze_yapimi.png" alt="Yelpaze Sanat"><span>🖌️ Yelpaze Sanat</span></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
