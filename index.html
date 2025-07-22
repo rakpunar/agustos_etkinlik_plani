@@ -143,6 +143,42 @@
   border-style: dashed;
   box-shadow: none;
 }
+
+
+    @media (max-width: 1200px) {
+      .takvim-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .takvim-header-row {
+        display: none;
+      }
+
+      .takvim-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .takvim-gun {
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .gun-etkinlik {
+        font-size: 1rem;
+      }
+
+      .gun-etkinlik img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    @media (max-width: 768px) {
+        .takvim-bos {
+          display: none !important;
+        }
+      }
   </style>
 </head>
 <body>
